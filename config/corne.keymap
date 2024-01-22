@@ -54,7 +54,7 @@
                         display-name = "num-nav";
                         bindings = <
    &kp KP_N0   &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_N4     &kp PG_UP  &kp LG(Z)  &kp UP    &kp LG(LS(Z)) &trans
-   &sk LCTRL   &sk LALT   &sk LCMD   &sk LSHIFT  &kp KP_N5     &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT     &END 
+   &sk LCTRL   &sk LALT   &sk LCMD   &sk LSHIFT  &kp KP_N5     &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT     &kp END 
    &KP KP_DOT  &kp KP_N9  &kp KP_N8  &kp KP_N7   &kp KP_N6     &kp PG_DN  &kp LG(V)  &kp LG(C) &kp LG(X)     &trans
                          &trans     &trans      &trans        &kp RET    &kp BSPC   &kp DEL
                         >;
