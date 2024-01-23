@@ -12,6 +12,10 @@
 #define NUM_NAV 1
 #define SYM 2
 
+&lt {
+    flavor = "hold-preferred";
+};
+
 / {
     chosen {
       zmk,matrix_transform = &five_column_transform;
