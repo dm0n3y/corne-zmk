@@ -9,8 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define BASE 0
-#define NUM_NAV 1
+#define MED_NAV 1
 #define SYM 2
+#define NUM 3
+
+
 
 &lt {
     flavor = "hold-preferred";
@@ -45,26 +48,26 @@
    &kp Q &kp W &kp E &kp R &kp T               &kp Y  &kp U  &kp I      &kp O    &kp P
    &kp A &kp S &kp D &kp F &kp G               &kp H  &kp J  &kp K      &kp L    &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B               &kp N  &kp M  &kp COMMA  &kp DOT  &kp QMARK
-   &kp ESC &lt NUM_NAV SPACE &mt LSHIFT TAB    &mt RSHIFT RET &lt SYM BSPC &kp DEL
+   &lt NUM ESC &lt MED_NAV SPACE &mt LSHIFT TAB    &mt RSHIFT RET &lt SYM BSPC &kp DEL
                         >;
                 };
 
-                num_nav_layer {
+                med_nav_layer {
 // -----------------------------------------------------------------------------------------
-// | 0    |  1  |  2  |  3   |  4  |     | PGUP | UNDO |  UP  | REDO |  )  |
-// | CTRL | ALT | CMD | SHFT |  5  |     | HOME | LFT  |  DN  | RGT  | END |
-// | DOT  |  9  |  8  |  7   |  6  |     | PGDN | PAST |  CP  | CUT  |     |
-//              |     |      |     |     | ENT  | BSPC | DEL |
-                        display-name = "num-nav";
+// |      | MUT  | VDN | VUP  | BRUP |     | PGUP | UNDO |  UP  | REDO |     |
+// | CTRL | ALT  | CMD | SHFT | BRDN |     | HOME | LFT  |  DN  | RGT  | END |
+// |      | PREV | P/P | NEXT | SCLK |     | PGDN | PAST |  CP  | CUT  |     |
+//               |     |      |      |     | ENT  | BSPC | DEL |
+                        display-name = "med-nav";
                         bindings = <
-   &kp KP_N0   &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_N4     &kp PG_UP  &kp LG(Z)  &kp UP    &kp LG(LS(Z)) &trans
-   &sk LCTRL   &sk LALT   &sk LCMD   &sk LSHIFT  &kp KP_N5     &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT     &kp END 
-   &kp KP_DOT  &kp KP_N9  &kp KP_N8  &kp KP_N7   &kp KP_N6     &kp PG_DN  &kp LG(V)  &kp LG(C) &kp LG(X)     &trans
-                         &trans     &trans      &trans         &kp RET    &kp BSPC   &kp DEL
+   &trans     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_UP     &kp PG_UP  &kp LG(Z)  &kp UP    &kp LG(LS(Z)) &trans
+   &sk LCTRL  &sk LALT    &sk LCMD      &sk LSHIFT    &kp C_BRI_DN     &kp LC(A)  &kp LEFT   &kp DOWN  &kp RIGHT     &kp LC(E)
+   &trans     &kp C_PREV  &kp C_PP      &kp C_NEXT    &kp LG(LC(Q))    &kp PG_DN  &kp LG(V)  &kp LG(C) &kp LG(X)     &trans
+                          &trans        &trans        &trans           &kp RET    &kp BSPC   &kp DEL
                         >;
                 };
 
-                raise_layer {
+                sym_layer {
 // -----------------------------------------------------------------------------------------
 // |  /  |  |  |  \  |  {  |  }  |     |  $  |  #   |  @  |  !  |  `   |
 // |  <  |  =  |  >  |  (  |  )  |     |  %  | SHFT | CMD | ALT | CTRL |
@@ -76,7 +79,18 @@
    &kp FSLH  &kp PIPE  &kp BSLH   &kp LBRC   &kp RBRC    &kp DLLR  &kp HASH    &kp AT          &kp EXCL     &kp GRAVE
    &kp LT    &kp EQUAL &kp GT     &kp LPAR   &kp RPAR    &kp PRCNT &sk RSHIFT  &sk RCMD        &sk RALT     &sk RCTRL
    &kp TILDE &kp UNDER &kp MINUS  &kp LBKT   &kp RBKT    &kp CARET &kp AMPS    &kp KP_MULTIPLY &kp KP_PLUS  &kp SQT
-                       &kp ESC    &kp SPACE  &kp TAB     &trans &trans &trans
+                       &kp ESC    &kp SPACE  &kp TAB     &trans    &trans      &trans
+                        >;
+                };
+
+                num_layer {
+                        display-name = "num";
+                        bindings = <
+
+   &trans    &trans    &trans    &trans     &trans      &trans   &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
+   &sk LCTRL &sk LALT  &sk LCMD  &sk LSHIFT &trans      &trans   &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
+   &trans    &trans    &trans    &trans     &trans      &trans   &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans
+                       &trans    &trans     &trans      &kp RET  &kp KP_N0  &kp KP_DOT
                         >;
                 };
         };
