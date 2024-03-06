@@ -43,9 +43,9 @@
 //             | ESC | SPC | TAB |     | ENT | BSPC | DEL |
                         display-name = "base";
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T               &kp Y  &kp U  &kp I      &kp O    &kp P
-   &kp A &kp S &kp D &kp F &kp G               &kp H  &kp J  &kp K      &kp L    &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B               &kp N  &kp M  &kp COMMA  &kp DOT  &kp QMARK
+   &kp Q &kp W &kp E &kp R &kp T                   &kp Y          &kp U        &kp I        &kp O   &kp P
+   &kp A &kp S &kp D &kp F &kp G                   &kp H          &kp J        &kp K        &kp L   &kp SEMI
+   &kp Z &kp X &kp C &kp V &kp B                   &kp N          &kp M        &kp COMMA    &kp DOT &kp QMARK
    &lt NUM ESC &lt MED_NAV SPACE &mt LSHIFT TAB    &mt RSHIFT RET &lt SYM BSPC &kp DEL
                         >;
                 };
@@ -53,13 +53,13 @@
                 med_nav_layer {
 // -----------------------------------------------------------------------------------------
 // |      | MUT  | VDN | VUP  | BRUP |     | PGUP | UNDO |  UP  | REDO |     |
-// | CTRL | ALT  | CMD | SHFT | BRDN |     | HOME | LFT  |  DN  | RGT  | END |
+// | SHFT | CTRL | ALT | CMD  | BRDN |     | HOME | LFT  |  DN  | RGT  | END |
 // |      | PREV | P/P | NEXT | SCLK |     | PGDN | PAST |  CP  | CUT  |     |
 //               |     |      |      |     | ENT  | BSPC | DEL |
                         display-name = "med-nav";
                         bindings = <
    &bt BT_CLR &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_UP     &kp PG_UP  &kp LG(Z)  &kp UP    &kp LG(LS(Z)) &trans
-   &sk LCTRL  &sk LALT    &sk LCMD      &sk LSHIFT    &kp C_BRI_DN     &kp LC(A)  &kp LEFT   &kp DOWN  &kp RIGHT     &kp LC(E)
+   &sk LSHIFT &sk LCTRL   &sk LALT      &sk LCMD      &kp C_BRI_DN     &kp LC(A)  &kp LEFT   &kp DOWN  &kp RIGHT     &kp LC(E)
    &trans     &kp C_PREV  &kp C_PP      &kp C_NEXT    &kp LG(LC(Q))    &kp PG_DN  &kp LG(V)  &kp LG(C) &kp LG(X)     &trans
                           &trans        &trans        &trans           &kp RET    &kp BSPC   &kp DEL
                         >;
@@ -67,17 +67,17 @@
 
                 sym_layer {
 // -----------------------------------------------------------------------------------------
-// |  /  |  |  |  \  |  {  |  }  |     |  $  |  #   |  @  |  !  |  `   |
-// |  <  |  =  |  >  |  (  |  )  |     |  %  | SHFT | CMD | ALT | CTRL |
-// |  ~  |  _  |  -  |  [  |  ]  |     |  ^  |  &   |  *  |  +  |  '   |
-//             | ESC | SPC | TAB |     |     |      |     |
+// |  /  |  |  |  \  |  {  |  }  |     |  $  |  #  |  @  |  !   |  `   |
+// |  <  |  =  |  >  |  (  |  )  |     |  %  | CMD | ALT | CTRL | SHFT |
+// |  ~  |  _  |  -  |  [  |  ]  |     |  ^  |  &  |  *  |  +   |  '   |
+//             | ESC | SPC | TAB |     |     |     |     |
                         display-name = "sym";
                         bindings = <
 
-   &kp FSLH  &kp PIPE  &kp BSLH   &kp LBRC   &kp RBRC    &kp DLLR  &kp HASH    &kp AT          &kp EXCL     &kp GRAVE
-   &kp LT    &kp EQUAL &kp GT     &kp LPAR   &kp RPAR    &kp PRCNT &sk RSHIFT  &sk RCMD        &sk RALT     &sk RCTRL
-   &kp TILDE &kp UNDER &kp MINUS  &kp LBKT   &kp RBKT    &kp CARET &kp AMPS    &kp KP_MULTIPLY &kp KP_PLUS  &kp SQT
-                       &kp ESC    &kp SPACE  &kp TAB     &trans    &trans      &trans
+   &kp FSLH  &kp PIPE  &kp BSLH   &kp LBRC   &kp RBRC    &kp DLLR  &kp HASH  &kp AT          &kp EXCL    &kp GRAVE
+   &kp LT    &kp EQUAL &kp GT     &kp LPAR   &kp RPAR    &kp PRCNT &sk RCMD  &sk RALT        &sk RCTRL   &sk RSHIFT
+   &kp TILDE &kp UNDER &kp MINUS  &kp LBKT   &kp RBKT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp KP_PLUS &kp SQT
+                       &kp ESC    &kp SPACE  &kp TAB     &trans    &trans    &trans
                         >;
                 };
 
@@ -86,7 +86,7 @@
                         bindings = <
 
    &trans     &trans    &trans    &trans     &trans      &kp DEL  &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
-   &sk LCTRL  &sk LALT  &sk LCMD  &sk LSHIFT &trans      &kp BSPC &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
+   &sk LSHIFT &sk LCTRL  &sk LALT  &sk LCMD  &trans      &kp BSPC &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
    &trans     &trans    &trans    &trans     &trans      &kp TAB  &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans
                         &trans    &trans     &trans      &kp RET  &kp KP_N0  &kp KP_DOT
                         >;
