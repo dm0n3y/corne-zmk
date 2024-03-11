@@ -31,19 +31,19 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        cosq: cosq {
+        cosq: comma_sqt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        pedq: pedq {
+        pedq: period_dqt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        quex: quex {
+        quex: quest_exclam {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
