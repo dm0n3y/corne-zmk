@@ -31,19 +31,19 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        com_sq: com_sq {
+        cosq: cosq {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        per_dq: per_dq {
+        pedq: pedq {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        que_ex: que_ex {
+        quex: quex {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
@@ -56,9 +56,9 @@
                 base_layer {
                         display-name = "base";
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T                              &kp Y        &kp U    &kp I     &kp O    &kp P
-   &kp A &kp S &kp D &kp F &kp G                              &kp H        &kp J    &kp K     &kp L    &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B                              &kp N        &kp M    &com_sq   &per_dq  &que_ex
+   &kp Q &kp W &kp E &kp R &kp T                              &kp Y        &kp U    &kp I   &kp O   &kp P
+   &kp A &kp S &kp D &kp F &kp G                              &kp H        &kp J    &kp K   &kp L   &kp SEMI
+   &kp Z &kp X &kp C &kp V &kp B                              &kp N        &kp M    &cosq   &pedq   &quex
    &lt NUM ESC &lt NAV SPACE &mt LSHIFT TAB    &mt RSHIFT RET &lt SYM BSPC &kp DEL
                         >;
                 };
