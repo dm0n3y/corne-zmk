@@ -31,6 +31,24 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        com_sq: com_sq {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        per_dq: per_dq {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp DQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        que_ex: que_ex {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -43,9 +61,9 @@
 //             | ESC | SPC | TAB |     | ENT | BSPC | DEL |
                         display-name = "base";
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T                   &kp Y          &kp U        &kp I        &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G                   &kp H          &kp J        &kp K        &kp L   &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B                   &kp N          &kp M        &kp COMMA    &kp DOT &kp QMARK
+   &kp Q &kp W &kp E &kp R &kp T                   &kp Y          &kp U        &kp I     &kp O    &kp P
+   &kp A &kp S &kp D &kp F &kp G                   &kp H          &kp J        &kp K     &kp L    &kp SEMI
+   &kp Z &kp X &kp C &kp V &kp B                   &kp N          &kp M        &com_sq   &per_dq  &que_ex
    &lt NUM ESC &lt MED_NAV SPACE &mt LSHIFT TAB    &mt RSHIFT RET &lt SYM BSPC &kp DEL
                         >;
                 };
@@ -55,7 +73,7 @@
 // |      | MUT  | VDN | VUP  | BRUP |     | PGUP | UNDO |  UP  | REDO |     |
 // | SHFT | CTRL | ALT | CMD  | BRDN |     | HOME | LFT  |  DN  | RGT  | END |
 // |      | PREV | P/P | NEXT | SCLK |     | PGDN | PAST |  CP  | CUT  |     |
-//               |     |      |      |     | ENT  | BSPC | DEL |
+//               |     |      |      |     | ENT  | BSPC |  DEL |
                         display-name = "med-nav";
                         bindings = <
    &bt BT_CLR &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_UP     &kp PG_UP  &kp LG(Z)  &kp UP    &kp LG(LS(Z)) &trans
@@ -73,10 +91,10 @@
 //             | ESC | SPC | TAB |     |     |     |     |
                         display-name = "sym";
                         bindings = <
-
-   &kp FSLH  &kp PIPE  &kp BSLH   &kp LBRC   &kp RBRC    &kp DLLR  &kp HASH  &kp AT          &kp EXCL    &kp GRAVE
-   &kp LT    &kp EQUAL &kp GT     &kp LPAR   &kp RPAR    &kp PRCNT &sk RCMD  &sk RALT        &sk RCTRL   &sk RSHIFT
-   &kp TILDE &kp UNDER &kp MINUS  &kp LBKT   &kp RBKT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp KP_PLUS &kp SQT
+&kp LT    &kp EQUAL &kp GT
+   &kp FSLH  &kp TILDE &kp FSLH   &kp LBRC   &kp RBRC    &kp DLLR  &kp HASH  &kp AT          &kp EXCL    &kp GRAVE
+   &kp AT    &kp DLLR  &kp PIPE   &kp LPAR   &kp RPAR    &kp PRCNT &sk RCMD  &sk RALT        &sk RCTRL   &sk RSHIFT
+   &kp AMPS  &kp UNDER &kp BLSH  &kp LBKT   &kp RBKT    &kp CARET  &kp KP_MULTIPLY &kp KP_PLUS &kp SQT
                        &kp ESC    &kp SPACE  &kp TAB     &trans    &trans    &trans
                         >;
                 };
