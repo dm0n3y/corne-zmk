@@ -33,18 +33,21 @@
         };
         cosq: comma_sqt {
             compatible = "zmk,behavior-mod-morph";
+            label = "cosq";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         pedq: period_dqt {
             compatible = "zmk,behavior-mod-morph";
+            label = "pedq";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         quex: quest_exclam {
             compatible = "zmk,behavior-mod-morph";
+            label = "quex";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
