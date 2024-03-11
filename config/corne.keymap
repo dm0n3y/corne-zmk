@@ -62,7 +62,7 @@
    &kp Q &kp W &kp E &kp R &kp T                              &kp Y        &kp U    &kp I   &kp O   &kp P
    &kp A &kp S &kp D &kp F &kp G                              &kp H        &kp J    &kp K   &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B                              &kp N        &kp M    &cosq   &pedq   &quex
-   &lt NUM ESC &lt NAV SPACE &mt LSHIFT TAB    &mt RSHIFT RET &lt SYM BSPC &kp DEL
+                     &lt NUM ESC &lt NAV SPACE &mt LSHIFT TAB    &mt RSHIFT RET &lt SYM BSPC &kp DEL
                         >;
                 };
 
@@ -81,7 +81,7 @@
                         bindings = <
    &trans    &kp HASH   &kp FSLH  &kp LBRC   &kp RBRC     &kp TILDE  &kp LT    &kp EQUAL  &kp GT     &trans
    &kp AT    &kp DLLR   &kp PIPE  &kp LPAR   &kp RPAR     &kp GRAVE  &sk RCMD  &sk RALT   &sk RCTRL  &sk RSHIFT
-   &kp AMPS  &kp PRCNT  &kp BLSH  &kp LBKT   &kp RBKT     &kp CARET  &kp KP_MULTIPLY  &kp KP_PLUS   &kp MINUS  &kp UNDER
+   &kp AMPS  &kp PRCNT  &kp BLSH  &kp LBKT   &kp RBKT     &kp CARET  &kp STAR  &kp PLUS   &kp MINUS  &kp UNDER
                         &kp ESC   &kp SPACE  &kp TAB      &trans     &trans    &trans
                         >;
                 };
@@ -89,7 +89,6 @@
                 num_layer {
                         display-name = "num";
                         bindings = <
-
    &trans     &trans    &trans    &trans     &trans      &kp DEL  &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
    &sk LSHIFT &sk LCTRL &sk LALT  &sk LCMD   &trans      &kp BSPC &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
    &trans     &trans    &trans    &trans     &trans      &kp TAB  &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans
