@@ -81,7 +81,7 @@
                         bindings = <
    &trans    &kp HASH   &kp FSLH  &kp LBRC   &kp RBRC     &kp TILDE  &kp LT    &kp EQUAL  &kp GT     &trans
    &kp AT    &kp DLLR   &kp PIPE  &kp LPAR   &kp RPAR     &kp GRAVE  &sk RCMD  &sk RALT   &sk RCTRL  &sk RSHIFT
-   &kp AMPS  &kp PRCNT  &kp BLSH  &kp LBKT   &kp RBKT     &kp CARET  &kp STAR  &kp PLUS   &kp MINUS  &kp UNDER
+   &kp AMPS  &kp PRCNT  &kp BSLH  &kp LBKT   &kp RBKT     &kp CARET  &kp STAR  &kp PLUS   &kp MINUS  &kp UNDER
                         &kp ESC   &kp SPACE  &kp TAB      &trans     &trans    &trans
                         >;
                 };
