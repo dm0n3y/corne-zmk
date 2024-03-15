@@ -69,9 +69,9 @@
                 nav_layer {
                         display-name = "nav";
                         bindings = <
-   &bt BT_CLR &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_UP     &kp PG_UP  &kp LG(Z)  &kp UP    &kp LG(LS(Z)) &trans
+   &trans     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_UP     &kp PG_UP  &kp LG(Z)  &kp UP    &kp LG(LS(Z)) &trans
    &sk LSHIFT &sk LCTRL   &sk LALT      &sk LCMD      &kp C_BRI_DN     &kp LC(A)  &kp LEFT   &kp DOWN  &kp RIGHT     &kp LC(E)
-   &trans     &kp C_PREV  &kp C_PP      &kp C_NEXT    &kp LG(LC(Q))    &kp PG_DN  &kp LG(V)  &kp LG(C) &kp LG(X)     &trans
+   &bt BT_CLR &kp C_PREV  &kp C_PP      &kp C_NEXT    &kp LG(LC(Q))    &kp PG_DN  &kp LG(V)  &kp LG(C) &kp LG(X)     &trans
                           &trans        &trans        &trans           &kp RET    &kp BSPC   &kp DEL
                         >;
                 };
